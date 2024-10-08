@@ -25,7 +25,7 @@ get_kolada_data <- function(kpi, municipality, year) {
   #url <- paste(base_url, endpoint, sep ="/")
   
   # Make the GET request
-  
+  response <- httr::GET(url)
   # Check for errors
   if (httr::http_status(response)$category != "Success") {
     stop("API request failed: ", httr::http_status(response)$message)
