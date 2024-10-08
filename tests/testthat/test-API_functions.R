@@ -5,9 +5,9 @@ library(testthat)
 test_that("get_kolada_data handles valid input correctly", {
   
   # Valid inputs (replace with actual test values)
-  kpi <- "N71006"  # Example indicator ID
-  municipality <- "0123"  # Example municipality ID (Stockholm, for example)
-  year <- "2020"
+  kpi <- "N01822"  # Example indicator ID
+  municipality <- "0180"  # Example municipality ID (Stockholm, for example)
+  year <- "2023"
   
   # Mock the response or test with the actual API if available
   # Here we assume the API is available; in a real scenario, you can mock the HTTP response.
