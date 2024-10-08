@@ -25,14 +25,11 @@ test_that("get_kolada_data handles valid input correctly", {
 
 test_that("get_kolada_data handles invalid input types", {
   
-  # Invalid kpi
-  expect_error(get_kolada_data(123, "0123", "2020"), "is.character(kpi)")
+  expect_error(get_kolada_data(123, "0123", "2020"), "The 'kpi' argument must be a character string.")
   
-  # Invalid municipality
-  expect_error(get_kolada_data("N71006", 456, "2020"), "is.character(municipality)")
+  expect_error(get_kolada_data("kpi", 123, "2020"), "The 'municipality' argument must be a character string.")
   
-  # Invalid year
-  expect_error(get_kolada_data("N71006", "0123", 2020), "is.character(year)")
+  expect_error(get_kolada_data("kpi", "0123", 2020), "The 'year' argument must be a character string.")
 })
 
 test_that("get_kolada_data handles missing parameters", {

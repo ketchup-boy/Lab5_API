@@ -14,7 +14,15 @@
 #' @export
 
 get_kolada_data <- function(kpi, municipality, year) {
-  stopifnot(is.character(kpi) & is.character(municipality) & is.character(year))
+  if (!is.character(kpi)) {
+    stop("The 'kpi' argument must be a character string.")
+  }
+  if (!is.character(municipality)) {
+    stop("The 'municipality' argument must be a character string.")
+  }
+  if (!is.character(year)) {
+    stop("The 'year' argument must be a character string.")
+  }
 
   # Base URL for the Kolada API
   base_url <- "http://api.kolada.se/v2/data/"
