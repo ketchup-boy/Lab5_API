@@ -12,27 +12,10 @@
 #' get_kolada_data("ou/municipality", list(name = "Stockholm"))
 #' }
 #' @export
-<<<<<<< HEAD
 
-#' Get Data from Kolada API
-#'
-#' This function fetches data from the Kolada API based on a specific endpoint and query.
-#'
-#' @param endpoint A string representing the API endpoint (e.g., "ou/municipality", "data").
-#' @param query A list of query parameters to filter the API results (optional).
-#'
-#' @return A list containing the API response data.
-#' @examples
-#' \dontrun{
-#' get_kolada_data("ou/municipality")
-#' get_kolada_data("data")
-#' }
-#' @export
-get_kolada_data <- function(endpoint, query = NULL) {
-=======
 get_kolada_data <- function(kpi, municipality, year) {
   stopifnot(is.character(kpi) & is.character(municipality) & is.character(year))
->>>>>>> 21416a7911305959a3f5a7c889246d9f8f529aad
+
   # Base URL for the Kolada API
   base_url <- "http://api.kolada.se/v2/data/"
   
@@ -42,21 +25,6 @@ get_kolada_data <- function(kpi, municipality, year) {
   #url <- paste(base_url, endpoint, sep ="/")
   
   # Make the GET request
-<<<<<<< HEAD
-  if (is.null(query)) {
-    response <- httr::GET(url)
-  } else {
-    response <- httr::GET(url, query = query)
-  }
-  
-  
-  # Check the full response details for debugging
-  #print(httr::http_status(response)) # Print the HTTP status
-  #print(httr::content(response, "text")) # Print the raw response content
-  
-=======
-  response <- httr::GET(url)
->>>>>>> 21416a7911305959a3f5a7c889246d9f8f529aad
   
   # Check for errors
   if (httr::http_status(response)$category != "Success") {
@@ -71,10 +39,6 @@ get_kolada_data <- function(kpi, municipality, year) {
 }
 
 
-
-<<<<<<< HEAD
-
-=======
 municipalities <- get_kolada_data(kpi = "N00945", municipality = "1080", year = "2023")
 print(municipalities)
->>>>>>> 21416a7911305959a3f5a7c889246d9f8f529aad
+
