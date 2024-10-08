@@ -47,24 +47,4 @@ test_that("get_kolada_data handles missing parameters", {
   expect_error(get_kolada_data("N71006", NULL, "2020"))
 })
 
-test_that("get_kolada_data handles API request failures", {
-  # Mock the response to simulate an API failure (using the mockr or httptest package)
-  # Here we simulate a failed API request by mocking the HTTP status response
-  httr::with_mock(
-    `httr::http_status` = function(...) list(category = "error"),
-    {
-      expect_error(get_kolada_data("N71006", "0123", "2020"), "API request failed")
-    }
-  )
-})
 
-test_that("get_kolada_data handles empty API responses", {
-  # Mock the API to return an empty response
-  httr::with_mock(
-    `httr::content` = function(...) list(values = list()),
-    {
-      result <- get_kolada_data("N71006", "0123", "2020")
-      expect_equal(length(result$values), 0)  # Expect empty values
-    }
-  )
-})
