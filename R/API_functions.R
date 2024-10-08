@@ -36,9 +36,6 @@ get_kolada_data <- function(endpoint, query = list()) {
 
 
 
-municipalities <- get_kolada_data("municipality")
+municipalities <- get_kolada_data("municipalities")
 print(municipalities)
 
-
-stockholm_data <- get_kolada_data("municipality", list(name = "Stockholm"))
-print(stockholm_data)
