@@ -1,3 +1,15 @@
+#' Get ID for municipality
+#'
+#' This function accepts a string for a municipality and returns the kolada ID for the given municipality
+#'
+#' @param municipality_name String for the desired municipality to get id for
+#'
+#' @return The id for the input municipality
+#' @examples
+#' \dontrun{
+#' get_municipality("Stockholm")
+#' @export
+
 get_municipality_id <- function(municipality_name) {
   # Fetch the data for all municipalities
   base_url <- "https://api.kolada.se/v2/"
