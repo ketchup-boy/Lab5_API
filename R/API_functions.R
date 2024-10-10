@@ -2,15 +2,14 @@
 #'
 #' This function fetches data from the Kolada API.
 #'
-#' @param endpoint A string representing the API endpoint (e.g., "municipality").
-#' @param query A list of query parameters to filter the API results (optional).
+#' @param kpi A string of the desired kpi statistic.
+#' @param municipality a string of the desired municipality that user wants kpi statistic about.
+#' @param year a string for the year the users want statistics about
 #'
 #' @return A list containing the API response data.
 #' @examples
 #' \dontrun{
-#' get_kolada_data("municipality")
-#' get_kolada_data("ou/municipality", list(name = "Stockholm"))
-#' }
+#' get_kolada_data(kpi = "N00945", municipality = "1080", year = "2023")
 #' @export
 
 get_kolada_data <- function(kpi, municipality, year) {
@@ -46,7 +45,4 @@ get_kolada_data <- function(kpi, municipality, year) {
   return(parsed_content)
 }
 
-
-municipalities <- get_kolada_data(kpi = "N00945", municipality = "1080", year = "2023")
-print(municipalities)
 
