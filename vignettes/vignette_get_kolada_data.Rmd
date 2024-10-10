@@ -1,0 +1,20 @@
+---
+title: "vignette_get_kolada_data"
+author: "Ana Stanojcic and Sofia Danielson"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{vignette_name}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(lab5)
+```
