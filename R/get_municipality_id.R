@@ -11,8 +11,8 @@
 #' \dontrun{
 #' get_municipality("Stockholm")
 #' }
-#' @name get_municipality
-#' @export get_municipality
+#' @name get_municipality_id
+#' @export get_municipality_id
 
 library(httr)
 library(jsonlite)
