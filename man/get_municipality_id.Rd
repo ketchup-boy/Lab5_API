@@ -15,3 +15,8 @@ The id for the input municipality
 \description{
 This function accepts a string for a municipality and returns the kolada ID for the given municipality
 }
+\examples{
+\dontrun{
+get_municipality("Stockholm")
+}
+}

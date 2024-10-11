@@ -19,3 +19,8 @@ A list containing the API response data.
 \description{
 This function fetches data from the Kolada API.
 }
+\examples{
+\dontrun{
+get_kolada_data(kpi = "N00945", municipality = "1080", year = "2023")
+}
+}
