@@ -5,11 +5,17 @@
 #' @param municipality_name String for the desired municipality to get id for
 #'
 #' @return The id for the input municipality
+#' @import httr
+#' @import jsonlite
 #' @examples
 #' \dontrun{
 #' get_municipality("Stockholm")
 #' }
-#' @export
+#' @name get_municipality
+#' @export get_municipality
+
+library(httr)
+library(jsonlite)
 
 get_municipality_id <- function(municipality_name) {
   # Fetch the data for all municipalities

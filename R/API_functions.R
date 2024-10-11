@@ -7,11 +7,17 @@
 #' @param year a string for the year the users want statistics about
 #'
 #' @return A list containing the API response data.
+#' @import httr
+#' @import jsonlite
 #' @examples
 #' \dontrun{
 #' get_kolada_data(kpi = "N00945", municipality = "1080", year = "2023")
 #' }
-#' @export
+#' @name get_kolada_data
+#' @export get_kolada_data
+
+library(httr)
+library(jsonlite)
 
 get_kolada_data <- function(kpi, municipality, year) {
   if (!is.character(kpi)) {
