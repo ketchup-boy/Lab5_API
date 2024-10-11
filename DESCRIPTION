@@ -7,7 +7,7 @@ Author: Sofia Danielson and Ana Stanojcic
 Maintainer: Sofia Danielson <yourfault@somewhere.net>
 Description: This package provides an interface to the Kolada API.
 License: MIT + file LICENSE
-imports: httr, jsonlite
+Imports: httr, jsonlite
 RoxygenNote: 7.3.2
 Encoding: UTF-8
 VignetteBuilder: knitr
