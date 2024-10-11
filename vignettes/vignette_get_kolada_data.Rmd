@@ -19,7 +19,7 @@ library(lab5)
 Introduction
 This vignette demonstrates how to use the get_kolada_data() function from the lab5 package. The function interacts with the Kolada API, which provides data on Swedish municipalities' performance in various areas, such as healthcare, education, and sustainability.
 
-We will show how to retrieve data for a specific KPI (Key Performance Indicator), municipality, and year using the get_kolada_data() function. We will also explain how to handle the returned data and extract useful information for further analysis.
+We will show how to retrieve data for a specific KPI (Key Performance Indicator), municipality, and year using the get_kolada_data() function. 
 
 # Example usage
 kpi <- "N02799"  # Number of children born per 1000

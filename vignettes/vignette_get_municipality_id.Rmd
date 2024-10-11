@@ -1,0 +1,43 @@
+---
+title: "vignette_get_municipality_id"
+author: "Ana Stanojcic and Sofia Danielson"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{vignette__get_municipality_id}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+```{r setup}
+library(lab5)
+```
+
+library(lab5)  
+
+#Introduction
+This vignette demonstrates how to use the get_municipality_id() function from the lab5 package. The function interacts with the Kolada API, which provides data on Swedish municipalities' performance in different areas, such as healthcare, education, and sustainability.
+
+The function retrieves the unique ID for a municipality from the Kolada API based on its name, using the get_municipality_id() function.
+
+#Example Usage
+## Fetch municipality ID for Lund
+```{r}
+municipality_name <- "Lund"
+municipality_id <- get_municipality_id(municipality_name)
+print(paste("The municipality ID for", municipality_name, "is", municipality_id))
+
+```
+
+
+#Conclusion
+This vignette demonstrated how to use the get_municipality_id() function to get the unique identifier for a municipality from the Kolada API. This identifier can be used in other API calls to retrieve specific performance data for the municipality.
+
+
