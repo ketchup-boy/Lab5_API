@@ -1,11 +1,5 @@
-#' @keywords internal
-"_PACKAGE"
-
-## usethis namespace: start
-## usethis namespace: end
-NULL
 #' lab5: Package for Interacting with the Kolada API
-#'
+#' 
 #' The lab5 package provides tools to interact with the Kolada API for retrieving performance data on Swedish municipalities. The key functions are getting municipality data according to KPI values.
 #'
 #' @section Functions:
@@ -25,6 +19,6 @@ NULL
 #' 
 #' \code{get_kolada_data("N02799", "0180", "2020")}
 #'
-#' @docType package
-#' @name lab5
-NULL
+#' @keywords internal
+"_PACKAGE"
+
