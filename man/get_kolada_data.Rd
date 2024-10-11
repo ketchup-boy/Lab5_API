@@ -3,9 +3,6 @@
 \name{get_kolada_data}
 \alias{get_kolada_data}
 \title{Get Data from Kolada API}
-\usage{
-get_kolada_data(kpi, municipality, year)
-}
 \arguments{
 \item{kpi}{A string of the desired kpi statistic.}
 
