@@ -16,6 +16,31 @@ knitr::opts_chunk$set(
 ```
 library(Lab5_API)  
 
+Introduction
+This vignette demonstrates how to use the get_kolada_data() function from the Lab5_API package. The function interacts with the Kolada API, which provides data on Swedish municipalities' performance in various areas, such as healthcare, education, and sustainability.
+
+We will show how to retrieve data for a specific KPI (Key Performance Indicator), municipality, and year using the get_kolada_data() function. We will also explain how to handle the returned data and extract useful information for further analysis.
+
+# Example usage
+kpi <- "N02799"  # Number of children born per 1000
+municipality <- "0180"  # Stockholm's municipality ID
+year <- "2020"
+
+# Fetch data from Kolada API
+data <- get_kolada_data(kpi, municipality, year)
+
+# Display the returned data structure
+str(data)
+
+
+#Explanation of the output:
+The returned data typically contains:
+count: The number of entries returned by the API;
+values: A list of data frames with the KPI values for the specified municipality and year
+
+#Conclusion
+We showed how to get data for a specific municipality, KPI and year
+
 ```{r setup}
-library(lab5)
+library(Lab5_API)
 ```

@@ -46,4 +46,3 @@ get_kolada_data <- function(kpi, municipality, year) {
   return(parsed_content)
 }
 
-
