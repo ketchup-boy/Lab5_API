@@ -8,6 +8,7 @@
 #' @examples
 #' \dontrun{
 #' get_municipality("Stockholm")
+#' }
 #' @export
 
 get_municipality_id <- function(municipality_name) {

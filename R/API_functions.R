@@ -10,6 +10,7 @@
 #' @examples
 #' \dontrun{
 #' get_kolada_data(kpi = "N00945", municipality = "1080", year = "2023")
+#' }
 #' @export
 
 get_kolada_data <- function(kpi, municipality, year) {
